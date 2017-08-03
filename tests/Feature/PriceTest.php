@@ -14,16 +14,9 @@ class PriceTest extends TestCase
      *
      * @return void
      */
-    public function testCreate()
+    public function testExample()
     {
-      $this->visitRoute('price');
-      /*
-        $this->browse(function ($browser) {
-            $browser->visit('/price')
-            -> assertSee('0円')
-            -> press('購入')
-            -> seePageIs("/price")
-            -> assertSee('500円');
-        });*/
+        $this->call('GET', '/price');
+        $this->assertTrue(true);
     }
 }
