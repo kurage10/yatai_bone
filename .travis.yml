@@ -1,6 +1,8 @@
 langage: php
 php:
-  - 7.1 
+  - 5.6
+  - 7.1
+
 
 before_script:
   - composer self-update
@@ -11,4 +13,4 @@ script:
 
 notifications:
   emails:
-    - etizenjellyfish415@gmail.com 
+    - etizenjellyfish415@gmail.com
