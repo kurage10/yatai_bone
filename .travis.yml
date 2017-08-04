@@ -3,11 +3,9 @@ php:
   - 7.1 
 
 before_script:
-  - mkdir bootstrap/cache
   - mkdir storage
   - mkdir storage/framework
   - mkdir storage/framework/cache
-  - sudo chmod -R 777 bootstrap/cache
   - sudo chmod -R 777 storage
   - composer self-update
   - composer install
