@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+//use Illuminate\Foundation\Testing\TestCase;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -17,6 +18,7 @@ class PriceTest extends TestCase
     public function testExample()
     {
         $this->call('GET', '/price');
-        $this->assertTrue(true);
+        //$this->press("焼きそば一丁");
+        //$this->assertTrue(true);
     }
 }
