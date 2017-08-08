@@ -18,7 +18,10 @@ class PriceTest extends TestCase
     public function testExample()
     {
         $this->call('GET', '/price');
-        //$this->press("焼きそば一丁");
-        //$this->assertTrue(true);
+        $response = $this->post('/price', ['count' => 5]);
+        $response
+            ->assertStatus(200)
+            ->assertSessionHas("sum", 5);
+      //  $this->assertTrue(true);
     }
 }

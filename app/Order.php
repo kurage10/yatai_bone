@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    public function food(){
+    /*public function food(){
       return $this->belongsTo('App\Food');
-    }
+    }*/
 }

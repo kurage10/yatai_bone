@@ -8,15 +8,58 @@
         <title>Laravel</title>
     </head>
     <body>
-        <div class="row center-block">
-           <p class="text-center">0円</p>
-        </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">サマリ</h3>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped">
+                  <tr>
+                    <td>売れた焼きそば</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>総額</td>
+                    <td>1000</td>
+                  </tr>
+                  <tr>
+                    <td>目標値</td>
+                    <td>100000</td>
+                  </tr>
+                  <tr>
+                    <td>あと何個</td>
+                    <td>100</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">計算</h3>
+              </div>
 
-        <div class="row center-block">
-            <button type="button" class="btn btn-primary btn-lg center-block">焼きそば一丁</button>
+              <div class="panel-body">
+                  {!! Form::open() !!}
+                  <div class="input-group">
+                    <span class="input-group-addon">焼きそば</span>
+                    <input type="number" class="form-control" name="count">
+                    <span class="input-group-addon">個</span>
+                  </div>
+
+
+                  <input type="submit" class="col-md-3 btn btn-primary"></botton>
+                  {!! Form::close() !!}
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+
+          </div>
         </div>
-        <div class="row center-block">
-            <button type="button" class="btn btn-secondary btn-lg center-block">キャンセル</button>
-        </div>
+      </div>
     </body>
 </html>
