@@ -18,19 +18,22 @@
               <div class="panel-body">
                 <table class="table table-striped">
                   <tr>
-                    <td>売れた焼きそば</td>
-                    <td></td>
+                    <td>目標値</td>
+                    <td>100000</td>
                   </tr>
+                  @foreach ($foods_list as $food)
+                  <tr>
+                    <td>売れた{{$food['name']}}</td>
+                    <td>{{$food['sum']}}</td>
+                  </tr>
+                  @endforeach
                   <tr>
                     <td>総額</td>
                     <td>1000</td>
                   </tr>
+
                   <tr>
-                    <td>目標値</td>
-                    <td>100000</td>
-                  </tr>
-                  <tr>
-                    <td>あと何個</td>
+                    <td>残額</td>
                     <td>100</td>
                   </tr>
                 </table>
@@ -43,14 +46,15 @@
 
               <div class="panel-body">
                   {!! Form::open() !!}
+                  @foreach($foods_list as $food)
                   <div class="input-group">
-                    <span class="input-group-addon">焼きそば</span>
-                    <input type="number" class="form-control" name="count">
+                    <span class="input-group-addon">{{$food['name']}}</span>
+                    <input type="number" class="form-control" id={{$food['name_id']}}>
                     <span class="input-group-addon">個</span>
                   </div>
+                  @endforeach
 
-
-                  <input type="submit" class="col-md-3 btn btn-primary"></botton>
+                  <input id="send_btn" type="submit" class="col-md-3 btn btn-primary"></botton>
                   {!! Form::close() !!}
 
               </div>

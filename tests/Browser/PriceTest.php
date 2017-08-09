@@ -13,17 +13,19 @@ class PriceTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    // 単に見てくれのテスト
+    public function testPageView()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/price')
-                    ->assertSee('0円')
-                    ->press('焼きそば一丁')
-                    ->assertSee('500円')
-                    ->press('焼きそば一丁')
-                    ->assertSee('1000円')
-                    ->press('キャンセル')
-                    ->assertSee('500円');
+                    ->assertSee("目標値")
+                    ->assertSee("売れた焼きそば")
+                    ->assertSee("売れた焼きそばセット")
+                    ->assertSee("総額")
+                    ->assertSee("残額")
+                    ->assertSee("焼きそば")
+                    ->assertSee("焼きそばセット")
+                    ->assertVisible('input#send_btn');
         });
     }
 }
