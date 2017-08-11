@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Detail;
 use App\Food;
 use Illuminate\Http\Request;
 
@@ -13,20 +14,21 @@ class DashboardController extends Controller
       $foods_list = array();
 
       foreach($foods as $food){
-        $orders = $food->orders();
+        $details = $food->details();
         $sum = 0;
-        if(count($orders) > 0){
-          foreach($orders as $order){
-            $sum = $sum + $order->num * $food->price;
+        if(count($details) > 0){
+          foreach($details as $detail){
+            $sum = $sum + $detail->num * $food->price;
           }
         }
         $foods_list[] = array('name' => $food->name, 'name_id' => $food->name_id, "sum" => $sum);
       }
+      var_dump($foods_list);
       return view('price',compact('foods_list'));
 
     }
 
     public function save(Request $request){
-      
+
     }
 }

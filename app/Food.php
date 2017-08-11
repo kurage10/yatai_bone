@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Food extends Model
 {
-    public function orders(){
-      return $this->hasMany("App\Order");
+    public function details(){
+      return $this->hasMany("App\Detail");
     }
 }
