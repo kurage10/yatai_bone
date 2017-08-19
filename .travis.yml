@@ -1,14 +1,17 @@
 langage: php
 php:
-  - 7.1 
+  - 7.1
+
 
 before_script:
+  - phpenv config-rm xdebug.ini
+  - cp .env.travis .env
   - composer self-update
-  - composer install
+  - composer install --no-interaction
 
 script:
   - vendor/bin/phpunit
 
 notifications:
   emails:
-    - etizenjellyfish415@gmail.com 
+    - etizenjellyfish415@gmail.com
