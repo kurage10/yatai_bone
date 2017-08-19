@@ -19,10 +19,10 @@ class DashboardController extends Controller
         $sum = 0;
         if(count($details) > 0){
           foreach($details as $detail){
-            $sum = $sum + $detail->num * $food->price;
+            $sum = $sum + $detail->num;
           }
         }
-        $all_sum = $all_sum + $sum;
+        $all_sum = $all_sum + $sum * $food->price;
         $foods_list[] = array('name' => $food->name, 'name_id' => $food->name_id, "sum" => $sum);
       }
       return view('price',compact('foods_list','all_sum'));
