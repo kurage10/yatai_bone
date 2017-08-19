@@ -12,13 +12,13 @@ class FoodTableSeeder extends Seeder
     public function run()
     {
         DB::table('foods')->insert([
-          'name' => "焼きそば",
-          'name_id' => 'soba',
+          'name' => "お好み焼き",
+          'name_id' => 'okonomi',
           'price' => 500,
         ]);
         DB::table('foods')->insert([
-          'name' => "焼きそばセット",
-          'name_id' => 'soba_set',
+          'name' => "お好み焼きセット",
+          'name_id' => 'okonomi_set',
           'price' => 700,
         ]);
     }

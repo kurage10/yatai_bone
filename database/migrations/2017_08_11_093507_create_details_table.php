@@ -15,6 +15,8 @@ class CreateDetailsTable extends Migration
     {
       Schema::create('details', function (Blueprint $table) {
           $table->increments('id');
+          $table->integer("order_id");
+          $table->integer("food_id");
           $table->integer('num');
           $table->timestamps();
       });

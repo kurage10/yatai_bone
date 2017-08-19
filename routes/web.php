@@ -14,5 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/price','DashboardController@view');
 Route::post('/price','DashboardController@save');
+Route::get('/price','DashboardController@view');

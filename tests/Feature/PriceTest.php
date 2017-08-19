@@ -19,9 +19,7 @@ class PriceTest extends TestCase
     {
         $this->call('GET', '/price');
         $response = $this->post('/price', ['count' => 5]);
-        $response
-            ->assertStatus(200)
-            ->assertSessionHas("sum", 5);
+        $response->assertSessionHas("sum", 5);
       //  $this->assertTrue(true);
     }
 }

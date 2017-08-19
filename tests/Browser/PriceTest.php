@@ -19,13 +19,22 @@ class PriceTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visit('/price')
                     ->assertSee("目標値")
-                    ->assertSee("売れた焼きそば")
-                    ->assertSee("売れた焼きそばセット")
+                    ->assertSee("売れたお好み焼き")
+                    ->assertSee("売れたお好み焼きセット")
                     ->assertSee("総額")
                     ->assertSee("残額")
-                    ->assertSee("焼きそば")
-                    ->assertSee("焼きそばセット")
+                    ->assertSee("お好み焼き")
+                    ->assertSee("お好み焼きセット")
                     ->assertVisible('input#send_btn');
         });
     }
+    // ボタン押すテスト
+    /*
+    public function testPageViewGoalCriteria()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/price')
+                    ->
+        });
+    }*/
 }
